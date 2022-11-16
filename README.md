@@ -4,7 +4,7 @@
 - Implementacja może zawierać błędy, nie została jeszcze w pełni wytestowana
 ```
 ### Przykłady:
-```
+```c++
 #include "ulamek/ulamek.hpp"
 int main()
 {
