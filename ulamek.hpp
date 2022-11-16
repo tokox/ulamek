@@ -90,6 +90,11 @@ class Ulamek {
 		Ulamek bezwzgledny() const;
 
 
+		bool skracaj_automatycznie(bool s = true);
+		Ulamek& skroc();
+		Ulamek skrocony();
+
+
 		bool rowny(const Ulamek& inny) const;
 		bool operator==(const Ulamek& inny) const;
 
