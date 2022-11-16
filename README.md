@@ -5,7 +5,7 @@
 ```
 ### Przykłady:
 ```c++
-#include "ulamek/ulamek.hpp"
+#include "ulamek.hpp"
 int main()
 {
 	Ulamek<int> u1(2, 10);
