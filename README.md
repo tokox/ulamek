@@ -1,6 +1,8 @@
 # Implementacja klasy dla ułamków zwykłych (liczb wymiernych)
 ## Jeśli nie wiesz jak korzystać z funkcji, sprawdź ~~[dokumentację](https://tokox.github.io/ulamek/docs/)~~ *Jeszcze nie gotowe*
-
+```diff
+- Implementacja może zawierać błędy, nie została jeszcze w pełni wytestowana
+```
 ### Przykłady:
 ```
 #include "ulamek/ulamek.hpp"
