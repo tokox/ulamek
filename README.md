@@ -1,2 +1,2 @@
 # Implementacja klasy dla ułamków zwykłych (liczb wymiernych).
-[Dokumentacja](docs/index.html)
+[Dokumentacja](https://tokox.github.io/ulamek/docs/)
