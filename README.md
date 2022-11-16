@@ -16,7 +16,8 @@ int main()
 	cout << u2.l() << "/" << u2.m() << endl; // wypisuje 15/1
 
 	cout << u2.do_liczby() << endl; // wypisuje 15
-	cout << u1.do_liczby() << endl; // ale to wypisuje 0, ponieważ 2/10 zaokrąglone w dół (int) to 0
+	cout << u1.do_liczby() << endl; // ale to wypisuje 0,
+			// ponieważ 2/10 zaokrąglone w dół (int) to 0
 
 	Ulamek<int> u3 = u2+u1*Ulamek<int>(3);
 
