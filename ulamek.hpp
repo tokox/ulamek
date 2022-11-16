@@ -89,10 +89,10 @@ class Ulamek {
 		Ulamek& ubezwzglednij();
 		Ulamek bezwzgledny() const;
 
-
-		bool skracaj_automatycznie(bool s = true);
-		Ulamek& skroc();
-		Ulamek skrocony();
+//Future functions
+//		bool skracaj_automatycznie(bool s = true);
+//		Ulamek& skroc();
+//		Ulamek skrocony();
 
 
 		bool rowny(const Ulamek& inny) const;
