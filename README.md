@@ -1,1 +1,1 @@
-# A class for rational numbers
+# Implementacja klasy dla ułamków zwykłych (liczb wymiernych).
