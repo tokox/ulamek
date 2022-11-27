@@ -89,10 +89,12 @@ class Ulamek {
 		Ulamek& ubezwzglednij();
 		Ulamek bezwzgledny() const;
 
-//Future functions
-//		bool skracaj_automatycznie(bool s = true);
-//		Ulamek& skroc();
-//		Ulamek skrocony();
+
+		Ulamek& skroc();
+		Ulamek skrocony() const;
+
+		void skracaj(bool s);
+		bool skracany() const;
 
 
 		bool rowny(const Ulamek& inny) const;
@@ -131,6 +133,7 @@ class Ulamek {
 		void zero_blad();
 		T L;
 		T M;
+		bool S;
 };
 
 #include "ulamek.cpp"

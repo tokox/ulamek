@@ -6,7 +6,7 @@ T NWD(T a, T b) {
 	if(a<0 && b<0)
 		m = -1;
 	if(a<0)
-		a *- -1;
+		a *= -1;
 	if(b<0)
 		b *= -1;
 	while(a != b) {
@@ -23,16 +23,16 @@ T NWW(T a, T b) {
 
 
 template<typename T>
-Ulamek<T>::Ulamek() : L(0), M(1) {}
+Ulamek<T>::Ulamek() : L(0), M(1), S(true) {}
 
 template<typename T>
-Ulamek<T>::Ulamek(const Ulamek& inny) : L(inny.l()), M(inny.m()) {}
+Ulamek<T>::Ulamek(const Ulamek& inny) : L(inny.l()), M(inny.m()), S(true) {}
 
 template<typename T>
-Ulamek<T>::Ulamek(const T& l) : L(l), M(1) {}
+Ulamek<T>::Ulamek(const T& l) : L(l), M(1), S(true) {}
 
 template<typename T>
-Ulamek<T>::Ulamek(const T& l, const T& m) : L(l), M(m) {
+Ulamek<T>::Ulamek(const T& l, const T& m) : L(l), M(m), S(true) {
 	T nwd = NWD(this->L, this->M);
 	this->L /= nwd;
 	this->M /= nwd;
@@ -314,6 +314,34 @@ Ulamek<T>& Ulamek<T>::ubezwzglednij() {
 template<typename T>
 Ulamek<T> Ulamek<T>::bezwzgledny() const {
 	return Ulamek(*this).ubezwzglednij();
+}
+
+
+template<typename T>
+Ulamek<T>& Ulamek<T>::skroc() {
+	if(!this->S) {
+		T nwd = NWD(this->L, this->M);
+		this->L /= nwd;
+		this->M /= nwd;
+	}
+	return *this;
+}
+
+template<typename T>
+Ulamek<T> Ulamek<T>::skrocony() const {
+	return Ulamek(*this).skroc();
+}
+
+template<typename T>
+void Ulamek<T>::skracaj(bool s) {
+	if(!this->S && s)
+		this->skroc();
+	this->S = s;
+}
+
+template<typename T>
+bool Ulamek<T>::skracany() const {
+	return this->S;
 }
 
 
