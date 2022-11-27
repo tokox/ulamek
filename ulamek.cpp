@@ -449,7 +449,7 @@ T Ulamek<T>::operator[](int i) const {
 		case 1:
 			return this->mianownik();
 		default:
-			throw std::runtime_error("Logiczny błąd ułamka: nie istnieją elementy o indeksach innych niz {0, 1}");
+			throw std::logic_error("Logiczny błąd ułamka: nie istnieją elementy o indeksach innych niz {0, 1}");
 	}
 }
 
