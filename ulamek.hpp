@@ -6,13 +6,13 @@ T NWD(T a, T b);
 template<typename T>
 T NWW(T a, T b);
 
-template<typename T>
+template<typename T = int>
 class Ulamek {
 	public:
 		Ulamek();
 		Ulamek(const Ulamek& inny);
 		Ulamek(const T& l);
-		Ulamek(const T& l, const T& m);
+		Ulamek(const T& l, const T& m, bool s = true);
 
 		Ulamek& ustaw();
 		Ulamek& operator()();
@@ -129,6 +129,7 @@ class Ulamek {
 		T operator[](int i) const;
 
 	private:
+		void skroc_jesli_skracany();
 		void popraw_minus();
 		void zero_blad();
 		T L;
@@ -137,5 +138,8 @@ class Ulamek {
 };
 
 #include "ulamek.cpp"
+
+template<typename T>
+using U = Ulamek<T>;
 
 #endif

@@ -26,18 +26,16 @@ template<typename T>
 Ulamek<T>::Ulamek() : L(0), M(1), S(true) {}
 
 template<typename T>
-Ulamek<T>::Ulamek(const Ulamek& inny) : L(inny.l()), M(inny.m()), S(true) {}
+Ulamek<T>::Ulamek(const Ulamek& inny) : L(inny.l()), M(inny.m()), S(inny.skracany()) {}
 
 template<typename T>
 Ulamek<T>::Ulamek(const T& l) : L(l), M(1), S(true) {}
 
 template<typename T>
-Ulamek<T>::Ulamek(const T& l, const T& m) : L(l), M(m), S(true) {
-	T nwd = NWD(this->L, this->M);
-	this->L /= nwd;
-	this->M /= nwd;
-	popraw_minus();
-	zero_blad();
+Ulamek<T>::Ulamek(const T& l, const T& m, bool s) : L(l), M(m), S(s) {
+	this->skroc_jesli_skracany();
+	this->popraw_minus();
+	this->zero_blad();
 }
 
 
@@ -450,6 +448,16 @@ T Ulamek<T>::operator[](int i) const {
 			return this->mianownik();
 		default:
 			throw std::logic_error("Logiczny błąd ułamka: nie istnieją elementy o indeksach innych niz {0, 1}");
+	}
+}
+
+
+template<typename T>
+void Ulamek<T>::skroc_jesli_skracany() {
+	if(this->skracany()) {
+		T nwd = NWD(this->L, this->M);
+		this->L /= nwd;
+		this->M /= nwd;
 	}
 }
 
