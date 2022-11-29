@@ -139,7 +139,7 @@ class Ulamek {
 
 #include "ulamek.cpp"
 
-template<typename T>
+template<typename T = int>
 using U = Ulamek<T>;
 
 #endif
